@@ -98,5 +98,24 @@ namespace ĐIEMANHHS
                 txtmon.DataSource = dt;
             }
         }
+
+        private void btnsua_Click(object sender, EventArgs e)
+        {
+            if (txtBT.Text == "" || txtGK.Text == "" || txtmon.Text == "" || txtTH.Text == "")
+            {
+                Alert("Vui lòng điền đầy đủ thông tin", showBiden.enmType.Warning);
+                return;
+            }
+            if (exedata("call myclassroombiden.sp_ins_updMarkPercent('" + txtmon.Text + "', '" + txtTH.Text + "','" + txtBT.Text + "','" + txtGK.Text + "')") == "1")
+            {
+                Alert("Sửa % điểm thành công", showBiden.enmType.Success);
+                loadperson();
+            }
+            else
+            {
+                Alert("Sửa thất bại", showBiden.enmType.Error);
+                return;
+            }
+        }
     }
 }
