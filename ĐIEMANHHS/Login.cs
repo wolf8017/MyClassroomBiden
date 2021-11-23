@@ -170,9 +170,7 @@ namespace ĐIEMANHHS
                 });
                 t.IsBackground = true;
                 t.Start();
-            }
-
-            
+            }      
         }
         void saveAccount()
         {
