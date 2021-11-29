@@ -31,7 +31,6 @@ namespace ĐIEMANHHS
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Teacher));
             this.DataTeacher = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +58,6 @@ namespace ĐIEMANHHS
             this.label1 = new System.Windows.Forms.Label();
             this.txtthread = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btnmail = new System.Windows.Forms.Button();
-            this.btnout_tchr = new Bunifu.Framework.UI.BunifuFlatButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.rjButton6 = new ĐIEMANHHS.RJButton();
             this.rjButton1 = new ĐIEMANHHS.RJButton();
@@ -428,42 +426,6 @@ namespace ĐIEMANHHS
             this.btnmail.UseVisualStyleBackColor = false;
             this.btnmail.Click += new System.EventHandler(this.btnmail_Click);
             // 
-            // btnout_tchr
-            // 
-            this.btnout_tchr.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnout_tchr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnout_tchr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnout_tchr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnout_tchr.BorderRadius = 0;
-            this.btnout_tchr.ButtonText = "Xuất ra file Excel";
-            this.btnout_tchr.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnout_tchr.DisabledColor = System.Drawing.Color.Gray;
-            this.btnout_tchr.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnout_tchr.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnout_tchr.Iconimage")));
-            this.btnout_tchr.Iconimage_right = null;
-            this.btnout_tchr.Iconimage_right_Selected = null;
-            this.btnout_tchr.Iconimage_Selected = null;
-            this.btnout_tchr.IconMarginLeft = 0;
-            this.btnout_tchr.IconMarginRight = 0;
-            this.btnout_tchr.IconRightVisible = true;
-            this.btnout_tchr.IconRightZoom = 0D;
-            this.btnout_tchr.IconVisible = true;
-            this.btnout_tchr.IconZoom = 50D;
-            this.btnout_tchr.IsTab = false;
-            this.btnout_tchr.Location = new System.Drawing.Point(1104, 546);
-            this.btnout_tchr.Name = "btnout_tchr";
-            this.btnout_tchr.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnout_tchr.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnout_tchr.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnout_tchr.selected = false;
-            this.btnout_tchr.Size = new System.Drawing.Size(144, 33);
-            this.btnout_tchr.TabIndex = 60;
-            this.btnout_tchr.Text = "Xuất ra file Excel";
-            this.btnout_tchr.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnout_tchr.Textcolor = System.Drawing.Color.White;
-            this.btnout_tchr.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnout_tchr.Click += new System.EventHandler(this.btnout_tchr_Click);
-            // 
             // rjButton6
             // 
             this.rjButton6.BackColor = System.Drawing.Color.Crimson;
@@ -526,7 +488,6 @@ namespace ĐIEMANHHS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(77)))), ((int)(((byte)(85)))));
             this.ClientSize = new System.Drawing.Size(1260, 588);
-            this.Controls.Add(this.btnout_tchr);
             this.Controls.Add(this.btnmail);
             this.Controls.Add(this.txtthread);
             this.Controls.Add(this.label1);
@@ -578,7 +539,6 @@ namespace ĐIEMANHHS
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtthread;
         private System.Windows.Forms.Button btnmail;
-        private Bunifu.Framework.UI.BunifuFlatButton btnout_tchr;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

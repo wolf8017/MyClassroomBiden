@@ -45,8 +45,7 @@ namespace ĐIEMANHHS
             {
                 Alert("Thêm thất bại", showBiden.enmType.Success);
                 return;
-            }
-           
+            } 
         }
 
         private void subject_Load(object sender, EventArgs e)
@@ -95,7 +94,6 @@ namespace ĐIEMANHHS
                 Alert("Sửa thất bại", showBiden.enmType.Error);
                 return;
             }
-
         }
 
         private void btndelete_Click(object sender, EventArgs e)
@@ -117,8 +115,6 @@ namespace ĐIEMANHHS
                 Alert("Xóa thất bại", showBiden.enmType.Error);
                 return;
             }
-
-
         }
 
         private void btnout_sj_Click(object sender, EventArgs e)

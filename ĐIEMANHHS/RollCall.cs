@@ -53,7 +53,6 @@ namespace ĐIEMANHHS
                 Alert("Vui lòng điền đầy đủ thông tin", showBiden.enmType.Warning);
                 return;
             }
-         
             if (DataHelper.InsertStudy(txtbuoi.Text.Trim(), datebatdau.Text.Trim(), dateketthuc.Text.Trim(),datengay.Text, chiase.acc.getUser(), txtmamon.Text.Trim()))
             {
                 Alert("Thêm buổi học thành công", showBiden.enmType.Success);
@@ -233,11 +232,9 @@ namespace ĐIEMANHHS
                 {
                     if (DataHelper.DiemDanhHS(chiase.acc.getUser(), id, mamon, "Có mặt"))
                     {
-
                         loadRollHS(txtmamon.Text);
                     }
                 }
-
             }
             else if (type == "2")
             {
@@ -254,8 +251,7 @@ namespace ĐIEMANHHS
                         loadRoll(txtmamon.Text);
                     }
                 }
-            }
-            
+            }    
         }
         private int index;
         public static string id;
@@ -288,11 +284,9 @@ namespace ĐIEMANHHS
                 {
                     if (DataHelper.DiemDanhHS(chiase.acc.getUser(), id, mamon, "Vắng"))
                     {
-
                         loadRollHS(txtmamon.Text);
                     }
                 }
-
             }
             else if (type == "2")
             {
@@ -305,7 +299,6 @@ namespace ĐIEMANHHS
                 {
                     if (DataHelper.DiemDanh(chiase.acc.getUser(), id, mamon, "Vắng"))
                     {
-
                         loadRoll(txtmamon.Text);
                     }
                 }

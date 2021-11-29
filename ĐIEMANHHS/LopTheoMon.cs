@@ -179,8 +179,7 @@ namespace ĐIEMANHHS
                     Alert("Không thể xóa", showBiden.enmType.Error);
                     return;
                 }
-            }
-            
+            } 
         }
 
         private void btnaddstu_Click(object sender, EventArgs e)
@@ -209,7 +208,6 @@ namespace ĐIEMANHHS
                 }
                 if (id == "0")
                 {
-
                     Alert("Không thể thêm dữ liệu", showBiden.enmType.Warning);
                 }
                 else
@@ -218,7 +216,6 @@ namespace ĐIEMANHHS
                 loadStudenUni();
                 }
                 connec.Close();
-
         }
 
         private void btndeleteStudent_Click(object sender, EventArgs e)
@@ -243,8 +240,6 @@ namespace ĐIEMANHHS
                     return;
                 }
             }
-
-
         }
         
         private void dataStudent_Uni_CellClick(object sender, DataGridViewCellEventArgs e)

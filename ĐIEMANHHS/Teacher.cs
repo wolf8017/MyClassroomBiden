@@ -106,7 +106,6 @@ namespace ĐIEMANHHS
                     }
                     addsendmail(txtmail.Text.Trim(), tk, pass);
                 }
-
             }
             else
             {

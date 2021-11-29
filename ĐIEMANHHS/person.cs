@@ -47,7 +47,6 @@ namespace ĐIEMANHHS
         }
         private void btnadd_Click(object sender, EventArgs e)
         {
-
             if (txtBT.Text == "" || txtGK.Text == "" || txtmon.Text == ""||txtTH.Text=="")
             {
                 Alert("Vui lòng điền đầy đủ thông tin", showBiden.enmType.Warning);

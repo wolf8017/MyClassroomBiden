@@ -114,7 +114,6 @@ namespace ĐIEMANHHS
         }
         private void btnadd_Click(object sender, EventArgs e)
         {
-
             if (txtname.Text.Trim() == "" || txtemail.Text.Trim() == "" || txtaddress.Text.Trim() == "" || txtphone.Text.Trim() == "")
             {
                 Alert("Vui lòng điền đầy đủ thông tin", showBiden.enmType.Warning);
@@ -211,7 +210,7 @@ namespace ĐIEMANHHS
                 Alert("Email không hợp lệ", showBiden.enmType.Warning);
                 return;
             }
-            if (DataHelper.UpdateStudent(chiase.acc.getUser().ToString(), id,txtname.Text.Trim(), cbClass.Text.Trim(), day.Text.Trim(), rdNam.Checked ? "Nam" : "Nữ", txtaddress.Text.Trim(), txtphone.Text.Trim(), txtemail.Text.Trim())) ;
+            if (DataHelper.UpdateStudent(chiase.acc.getUser().ToString(), id,txtname.Text.Trim(), cbClass.Text.Trim(), day.Text.Trim(), rdNam.Checked ? "Nam" : "Nữ", txtaddress.Text.Trim(), txtphone.Text.Trim(), txtemail.Text.Trim()))
             {
                 Alert("Cập nhập thành công", showBiden.enmType.Success);
                 string ad = getAdmin();

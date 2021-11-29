@@ -105,7 +105,6 @@ namespace ĐIEMANHHS
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             if (id == null)
             {
                 Alert("Chưa chọn giá trị để xóa", showBiden.enmType.Warning);
