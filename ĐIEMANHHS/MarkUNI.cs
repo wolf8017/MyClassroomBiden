@@ -82,7 +82,7 @@ namespace ĐIEMANHHS
         {
 
             //datastudent.Rows.Clear();
-            string query = "select MHS_ID as 'ID',MHS_STUD_ID as 'Mã SV',MHS_CBS_ID as 'Mã lớp theo môn',MHS_Semi_Mark as 'Giữa kì',MHS_Final_Mark as 'Cuối kì',MHS_GPA as 'Thường xuyên' from marks_hs order by MHS_ID ASC";
+            string query = "select MHS_ID as 'ID',MHS_STUD_ID as 'Mã SV',MHS_CBS_ID as 'Mã lớp theo môn',MHS_Semi_Mark as 'Giữa kì',MHS_Final_Mark as 'Cuối kì', MHS_GPA as 'Điểm trung bình' from marks_hs order by MHS_ID ASC";
             using (MySqlConnection connec = new MySqlConnection(KetNoi.connection))
             {
                 connec.Open();
@@ -100,7 +100,7 @@ namespace ĐIEMANHHS
         {
 
             //datastudent.Rows.Clear();
-            string query = "select MU_ID as 'ID',MU_STUD_ID as 'Mã SV',MU_CBS_ID as 'Mã lớp theo môn',MU_Semi_Mark as 'Giữa kì',MU_Final_Mark as 'Cuối kì',MU_GPA as 'Thực hành' from marks_uni order by MU_ID ASC";
+            string query = "select MU_ID as 'ID',MU_STUD_ID as 'Mã SV',MU_CBS_ID as 'Mã lớp theo môn',MU_Semi_Mark as 'Giữa kì',MU_Final_Mark as 'Cuối kì',MU_GPA as 'Điểm trung bình' from marks_uni order by MU_ID ASC";
             using (MySqlConnection connec = new MySqlConnection(KetNoi.connection))
             {
                 connec.Open();

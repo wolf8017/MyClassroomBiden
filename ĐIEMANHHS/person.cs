@@ -26,7 +26,9 @@ namespace ĐIEMANHHS
         }
         void loadperson()
         {
-            string query = "select MPU_CBS_ID as 'Lớp theo môn',MPU_Pratice_Percent as '% Thực hành',MPU_Exercise_Percent as '% Bài tập',MPU_Semi_Semester_Percent as '% Giữa kì' from marks_percent_uni";
+            string query = "SELECT MPU_CBS_ID as 'Lớp theo môn', MPU_Pratice_Percent as '% Thực hành',MPU_Exercise_Percent as '% Bài tập',MPU_Semi_Semester_Percent as '% Giữa kì' " +
+                "FROM myclassroombiden.marks_percent_uni mu inner join class_by_subject cbs on mu.MPU_CBS_ID = cbs.CBS_ID " +
+                "where cbs.CBS_Tchr_ID = '" + chiase.acc.getUser() +"'";
             using (MySqlConnection connec = new MySqlConnection(KetNoi.connection))
             {
                 connec.Open();

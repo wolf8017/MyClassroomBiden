@@ -35,7 +35,7 @@ namespace ĐIEMANHHS
         void loadStudent()
         {
             datahs.Rows.Clear();
-            string query = "select * from detail_mark_hs";
+            string query = "select * from detail_mark_hs where DMHS_CBS_ID = '" + txtmamon.Text + "'";
             List<DetailHS> list = DataHelper.LoadDetailMarkHS(query);
             foreach (DetailHS item in list)
             {
@@ -135,7 +135,7 @@ namespace ĐIEMANHHS
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            if (exedata("call sp_updateDetailMark_hs('" + chiase.acc.getUser() + "', '" + id + "','" + cbtype.Text + "','" + txtmark.Text + "','" + txthocki.Text + "')") == "1")
+            if (exedata("call sp_updateDetailMark_hs('" + chiase.acc.getUser() + "', '" + id + "','" + cbtype.Text + "','" + txtmark.Text + "','" + txthocki.SelectedIndex+1 + "')") == "1")
             {
                 Alert("Cập nhập thành công", showBiden.enmType.Success);
                 loadStudent();
@@ -149,7 +149,14 @@ namespace ĐIEMANHHS
 
         private void txtmamon_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (txtmamon.SelectedIndex.ToString() != null)
+            {
+                loadStudent();
+            }
+            else
+            {
+                loadStudent();
+            }
         }
     }
 }

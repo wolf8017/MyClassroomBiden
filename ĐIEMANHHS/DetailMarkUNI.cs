@@ -34,7 +34,7 @@ namespace ĐIEMANHHS
         void loadStudent()
         {
             datahs.Rows.Clear();
-            string query = "select * from detail_mark_uni";
+            string query = "select * from detail_mark_uni where DMU_CBS_ID = '" + txtmamon.Text + "'";
             List<DetailHS> list = DataHelper.LoadDetailMarkUni(query);
             foreach (DetailHS item in list)
             {
@@ -91,7 +91,7 @@ namespace ĐIEMANHHS
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            if (exedata("call sp_insDetailMarks_uni('" + chiase.acc.getUser() + "', '" + id + "','" + txtmamon.Text + "','" + cbtype.Text + "','" + txtmark.Text + "')") == "1")
+            if (exedata("call sp_updateDetailMark_uni('" + chiase.acc.getUser() + "', '" + id + "','" + cbtype.Text + "','" + txtmark.Text + "')") == "1")
             {
                 Alert("Cập nhập thành công", showBiden.enmType.Success);
                 loadStudent();
@@ -147,6 +147,18 @@ namespace ĐIEMANHHS
                 //txtmamon.DisplayMember = "foodname";
                 txtmamon.ValueMember = "CBS_ID";
                 txtmamon.DataSource = dt;
+            }
+        }
+
+        private void txtmamon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (txtmamon.SelectedIndex.ToString() != null)
+            {
+                loadStudent();
+            }
+            else
+            {
+                loadStudent();
             }
         }
     }

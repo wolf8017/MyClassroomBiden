@@ -326,6 +326,7 @@ namespace ĐIEMANHHS
             this.txtmamon.Name = "txtmamon";
             this.txtmamon.Size = new System.Drawing.Size(235, 21);
             this.txtmamon.TabIndex = 1;
+            this.txtmamon.SelectedIndexChanged += new System.EventHandler(this.txtmamon_SelectedIndexChanged);
             // 
             // DetailMarkUNI
             // 
